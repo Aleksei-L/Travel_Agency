@@ -1,4 +1,3 @@
-#include <string.h>
 #include "Table.h"
 
 // Ввод информации про клиента
