@@ -1,8 +1,6 @@
-﻿#include "Table.h"
+#include "Table.h"
 
 int main() {
-
-	
 
 	Input();
 	Output();

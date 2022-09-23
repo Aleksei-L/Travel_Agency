@@ -2,14 +2,14 @@
 #include <iostream>
 
 struct Client {
-	char* name; // Имя клиента
-	char city[30]; // Адрес клиента
-	int phone; // Телефон клиента
-	double age; // Возраст клиента
+	char* name; // РРјСЏ РєР»РёРµРЅС‚Р°
+	char city[30]; // РђРґСЂРµСЃ РєР»РёРµРЅС‚Р°
+	int phone; // РўРµР»РµС„РѕРЅ РєР»РёРµРЅС‚Р°
+	double age; // Р’РѕР·СЂР°СЃС‚ РєР»РёРµРЅС‚Р°
 };
 
 int input(Client* p);
 void output(Client* p);
 int cmp(Client* a, Client* b);
 int equal(Client* a, Client* b);
-typedef Client* T;
+//typedef Client* T;

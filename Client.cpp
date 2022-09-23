@@ -1,6 +1,7 @@
 #include "Table.h"
 #include <string.h>
 
+// Ввод информации про клиента
 int input(Client* c) {
 	char buf[256];
 	c->name = NULL;
@@ -27,6 +28,7 @@ int input(Client* c) {
 	return !std::cin.eof();
 }
 
+// Вывод информации про клиента
 void output(Client * c) {
 	std::cout << "Client name: " << c->name << std::endl;
 	std::cout << "City: " << c->city << std::endl;
@@ -34,6 +36,7 @@ void output(Client * c) {
 	std::cout << "Age: " << c->age << std::endl;
 }
 
+// Разница между клиентами
 int cmp(Client * a, Client * b) {
 	int cond;
 	if ((cond = strcmp(a->name, b->name)) != 0)
@@ -47,6 +50,7 @@ int cmp(Client * a, Client * b) {
 	return 0;
 }
 
+// Проверка клиентов на равенство
 int equal(Client * a, Client * b) {
 	return !strcmp(a->name, b->name) && !strcmp(a->city, b->city) && (a->phone == b->phone) && (a->age == b->age);
 }

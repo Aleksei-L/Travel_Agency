@@ -1,8 +1,6 @@
 #pragma once
 #include "Client.h"
 
-const int size = 3;
-T m[size];
-
+// Прототипы
 int Input();
 void Output();
