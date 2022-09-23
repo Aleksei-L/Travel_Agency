@@ -1,7 +1,7 @@
 #include "Table.h"
 
-const int size = 3;
-Client* m[size];
+const int size = 10;
+T m[size];
 
 // Ввод таблицы
 int Input() {

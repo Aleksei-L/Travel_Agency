@@ -12,4 +12,4 @@ int input(Client* p);
 void output(Client* p);
 int cmp(Client* a, Client* b);
 int equal(Client* a, Client* b);
-//typedef Client* T;
+typedef Client* T;

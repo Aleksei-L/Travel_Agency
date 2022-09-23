@@ -1,5 +1,5 @@
-#include "Table.h"
 #include <string.h>
+#include "Table.h"
 
 // Ввод информации про клиента
 int input(Client* c) {
