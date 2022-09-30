@@ -10,6 +10,6 @@ struct Client {
 
 int input(Client* p);
 void output(Client* p);
-int cmp(Client* a, Client* b);
-int equal(Client* a, Client* b);
+int cmp(const Client& a, const Client& b);
+int equal(const Client& a, const Client& b);
 typedef Client* T;

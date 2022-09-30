@@ -25,14 +25,17 @@ void Output() {
 void Sort() {
 	for (int i = 0; i < size; i++) {
 		for (int j = i + 1; j < size; j++) {
-			if (strcmp(m[i]->name, m[j]->name) > 0)
+			if (cmp(*m[i], *m[j]) > 0)
 				std::swap(m[i], m[j]);
-			else if (strcmp(m[i]->city, m[j]->city) > 0)
-				std::swap(m[i], m[j]);
-			else if (m[i]->phone > m[j]->phone)
-				std::swap(m[i], m[j]);
-			else if (m[i]->age > m[j]->age)
-				std::swap(m[i], m[j]);
+		}
+	}
+}
+
+// Поиск клиента в таблице, возвращает индекс найденного клиента или -1 если клиент не найден
+int Search(const Client& tempClient) {
+	for (int i = 0; i < size; i++) {
+		if (equal(*m[i], tempClient))
+			return i;
 		}
 	}
 }

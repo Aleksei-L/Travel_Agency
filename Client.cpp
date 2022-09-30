@@ -28,7 +28,7 @@ int input(Client* c) {
 }
 
 // Вывод информации про клиента
-void output(Client * c) {
+void output(Client* c) {
 	std::cout << "Client name: " << c->name << std::endl;
 	std::cout << "City: " << c->city << std::endl;
 	std::cout << "Phone: " << c->phone << std::endl;
@@ -36,20 +36,20 @@ void output(Client * c) {
 }
 
 // Разница между клиентами
-int cmp(Client * a, Client * b) {
+int cmp(const Client& a, const Client& b) {
 	int cond;
-	if ((cond = strcmp(a->name, b->name)) != 0)
+	if ((cond = strcmp(a.name, b.name)) != 0)
 		return cond;
-	else if ((cond = strcmp(a->city, b->city)) != 0)
+	else if ((cond = strcmp(a.city, b.city)) != 0)
 		return cond;
-	else if ((cond = a->phone - b->phone) != 0)
+	else if ((cond = a.phone - b.phone) != 0)
 		return cond;
-	else if ((cond = a->age - b->age) != 0)
+	else if ((cond = a.age - b.age) != 0)
 		return cond;
 	return 0;
 }
 
 // Проверка клиентов на равенство
-int equal(Client * a, Client * b) {
-	return !strcmp(a->name, b->name) && !strcmp(a->city, b->city) && (a->phone == b->phone) && (a->age == b->age);
+int equal(const Client& a, const Client& b) {
+	return !strcmp(a.name, b.name) && !strcmp(a.city, b.city) && (a.phone == b.phone) && (a.age == b.age);
 }
