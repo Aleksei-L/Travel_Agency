@@ -37,5 +37,8 @@ int Search(const Client& tempClient) {
 		if (equal(*m[i], tempClient))
 			return i;
 		}
+	return -1;
 	}
+
+
 }
