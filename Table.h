@@ -7,3 +7,4 @@ int Input();
 void Output();
 void Sort();
 int Search(const Client& tempClient);
+void Remove(Client& badClient);

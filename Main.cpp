@@ -1,7 +1,6 @@
 #include "Table.h"
 
 int main() {
-
 	Input();
 	std::cout << std::endl;
 	Sort();
@@ -9,11 +8,14 @@ int main() {
 	Output();
 	std::cout << std::endl;
 
-	std::cout << "Enter client for search: " << std::endl;
-	Client searchClient;
-	input(&searchClient);
+	std::cout << "Enter client for remove: " << std::endl;
+	Client badClient;
+	input(&badClient);
 
-	std::cout << "Search returns: " << Search(searchClient) << std::endl;
+	Remove(badClient);
+
+	std::cout << std::endl;
+	Output();
 
 	return 0;
 }
