@@ -8,11 +8,9 @@ int main() {
 	Output();
 	std::cout << std::endl;
 
-	std::cout << "Enter client for remove: " << std::endl;
-	Client badClient;
-	input(&badClient);
+	std::cout << "Enter client for replace: " << std::endl;
 
-	Remove(badClient);
+	Replace();
 
 	std::cout << std::endl;
 	Output();

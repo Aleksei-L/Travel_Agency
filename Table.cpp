@@ -45,6 +45,28 @@ int Search(const Client& tempClient) {
 	return -1;
 	}
 
+// Замена клиента в таблице
+void Replace() {
+	// Запрос старого клиента
+	std::cout << "Enter old client: " << std::endl;
+	Client oldClient;
+	input(&oldClient);
+
+	// Запрос нового клиента
+	std::cout << "Enter new client: " << std::endl;
+	Client newClient;
+	input(&newClient);
+
+	// Поиск и замена
+	int index = Search(oldClient);
+	while (index != -1) {
+		m[index]->name = newClient.name;
+		strcpy_s(m[index]->city, 30, newClient.city);
+		m[index]->phone = newClient.phone;
+		m[index]->age = newClient.age;
+		index = Search(oldClient);
+	}
+}
 
 // Удаление всех вхождений
 void Remove(Client& badClient) {
