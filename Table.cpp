@@ -18,9 +18,9 @@ void Output() {
 	bool flag = false;
 	for (int i = 0; i < size; i++) {
 		if (m[i] != NULL) {
-		output(m[i]);
+			output(m[i]);
 			flag = true;
-}
+		}
 	}
 	if (!flag)
 		std::cout << "There is no to output!" << std::endl;
@@ -41,9 +41,9 @@ int Search(const Client& tempClient) {
 	for (int i = 0; i < size; i++) {
 		if (m[i] != NULL && equal(*m[i], tempClient))
 			return i;
-		}
-	return -1;
 	}
+	return -1;
+}
 
 // Замена клиента в таблице
 void Replace() {
